@@ -1,0 +1,17 @@
+<hello name="{{ name }}"></hello>
+<p>I am from app.componet.html :)</p>
+<p>First Name & LastName = {{ firstname }} {{ lastname }}</p>
+
+Diplay Div : <input type="checkbox" [(ngModel)]="displayDiv" />
+
+<div *ngIf="displayDiv; else NoDivInfo">
+  <p>Full Name = {{ fullname }}</p>
+  <input type="text" [(ngModel)]="firstname" /> <br /><br /><br />
+
+  <input type="button" value="ClickMe!!" (click)="getFullName()" />
+</div>
+
+<ng-template #NoDivInfo>
+  <br /><br /><br />
+  <b>Click checkbox to display Div :-) </b>
+</ng-template>
